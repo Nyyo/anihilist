@@ -273,7 +273,7 @@ def setup():
         newAccessToken(auth_code)
     else:
         getAccessToken() # may have to be refreshed
-    logging.basicConfig(level=logging.INFO, filename='/tmp/anihilist.log')
+    logging.basicConfig(level=logging.INFO, filename='anihilist.log')
 
 def callAPI(method, url, data=None, headers={}):
     conn = http.client.HTTPSConnection('anilist.co', 443)
@@ -374,7 +374,7 @@ def searchAnime(lisd):
     query = ''
     c = None
     while not c in [curses.KEY_ENTER, '\n', '\r']:
-        c = scr.get_wch()
+        c = scr.getkey()
         if c in [curses.KEY_BACKSPACE, '\u0008']:
             query = query[0:-1]
         else:
