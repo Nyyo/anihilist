@@ -14,6 +14,7 @@ key features
 
 setup
 -----
+* (win only) require curses module found [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#curses)
 * write your anilist user[name|id] into the file `username`
 * run `python3 anihilist.py`
 * the program will ask you to generate an auth code on [this site](http://moc.sirtetris.com/anihilist/echocode.php)
